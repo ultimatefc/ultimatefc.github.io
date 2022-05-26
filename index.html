@@ -177,7 +177,7 @@
                         status: 0
                 },
                 static: {
-                        url: "https://ultimatefightingcock.com/health.htm",
+                        url: "https://ultimatefightingcock.com/health.htm/",
                         status: 0
                 }
                 }
@@ -213,7 +213,7 @@
 
                 storedDomain: null,
                 firstAvailableDomain: null,
-                localStorageKey: 'last_used_domain_ufc3'
+                localStorageKey: 'last_used_domain_ufc7'
             },
             mounted(){
                 this.changeStatus(this.statusMessages.init, 0);
@@ -240,6 +240,7 @@
                     
 
                     this.checkDomainIsAvailable(0).then((data) => {
+
                         this.firstAvailableDomain = this.domains[data.index];
                         this.changeStatus(this.statusMessages.found, 1);
                         this.saveDomain(this.firstAvailableDomain);
