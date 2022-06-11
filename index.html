@@ -165,7 +165,24 @@
     </div>
 
     <script>
-        window.domains = [       
+        window.domains = [ 
+            {
+                name: "UfcNation.Net",
+                domain: "ufcnation.net",
+                url: "https://ufcnation.net/",
+                redirectUrl: "",
+                health_check: {
+                    api: {
+                        url: "https://ufcnation.net/health",
+                        status: 0
+                },
+                static: {
+                        url: "https://ufcnation.net/health.htm/",
+                        status: 0
+                }
+                }
+            
+            },      
             {
                 name: "UltimateFightingCock.Com",
                 domain: "ultimatefightingcock.com",
@@ -177,7 +194,7 @@
                         status: 0
                 },
                 static: {
-                        url: "https://ultimatefightingcock.com/health.htm",
+                        url: "https://ultimatefightingcock.com/health.htm/",
                         status: 0
                 }
                 }
@@ -213,7 +230,7 @@
 
                 storedDomain: null,
                 firstAvailableDomain: null,
-                localStorageKey: 'last_used_domain_ufc8'
+                localStorageKey: 'last_used_domain_ufc2'
             },
             mounted(){
                 this.changeStatus(this.statusMessages.init, 0);
