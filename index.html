@@ -173,15 +173,13 @@
                 redirectUrl: "",
                 health_check: {
                     api: {
-                        url: "https://ufcnation.net/health",
+                        url: "https://ultimatefc.net/health",
                         status: 0
                 },
                 static: {
                         url: "https://ufcnation.net/health.htm",
                         status: 0
                 }
-                }
-            
             },      
             {
                 name: "UltimateFightingCock.Com",
@@ -197,6 +195,20 @@
                         url: "https://ultimatefightingcock.com/health.htm",
                         status: 0
                 }
+            },
+            {
+                name: "UltimateCockFighting.Com",
+                domain: "ultimatecockfighting.com",
+                url: "https://ultimatecockfighting.com",
+                redirectUrl: "",
+                health_check: {
+                    api: {
+                        url: "https://ultimatefc.net/health",
+                        status: 0
+                },
+                static: {
+                        url: "https://ultimatecockfighting.com/health.htm",
+                        status: 0
                 }
             }
         ]
@@ -230,7 +242,7 @@
 
                 storedDomain: null,
                 firstAvailableDomain: null,
-                localStorageKey: 'last_used_domain_ufc3'
+                localStorageKey: 'last_used_domain_ufc4'
             },
             mounted(){
                 this.changeStatus(this.statusMessages.init, 0);
