@@ -173,13 +173,15 @@
                 redirectUrl: "",
                 health_check: {
                     api: {
-                        url: "https://ultimatefc.net/health",
+                        url: "https://ufcnation.net/health",
                         status: 0
                 },
                 static: {
                         url: "https://ufcnation.net/health.htm",
                         status: 0
                 }
+                }
+            
             },      
             {
                 name: "UltimateFightingCock.Com",
@@ -195,20 +197,6 @@
                         url: "https://ultimatefightingcock.com/health.htm",
                         status: 0
                 }
-            },
-            {
-                name: "UltimateCockFighting.Com",
-                domain: "cloud.ultimatecockfighting.com",
-                url: "https://cloud.ultimatecockfighting.com",
-                redirectUrl: "",
-                health_check: {
-                    api: {
-                        url: "https://cloud.ultimatecockfighting.com/health",
-                        status: 0
-                },
-                static: {
-                        url: "https://cloud.ultimatecockfighting.com/health.htm",
-                        status: 0
                 }
             }
         ]
@@ -242,7 +230,7 @@
 
                 storedDomain: null,
                 firstAvailableDomain: null,
-                localStorageKey: 'last_used_domain_ufc5'
+                localStorageKey: 'last_used_domain_ufc3'
             },
             mounted(){
                 this.changeStatus(this.statusMessages.init, 0);
@@ -335,7 +323,6 @@
                     }).catch((data) => {
                         this.domains[data.index].health_check.api.status = 2;
                     });
-
                     this.sendRequest(this.domains[i].health_check.static.url, i).then((data) => {
                         this.domains[data.index].health_check.static.status = 1;
                     }).catch((data) => {
